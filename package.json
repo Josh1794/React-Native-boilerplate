@@ -8,7 +8,6 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "base": "^3.0.0",
     "expo": "~36.0.0",
     "native": "^0.3.3",
     "native-base": "^2.13.8",
