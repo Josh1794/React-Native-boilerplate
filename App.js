@@ -1,7 +1,16 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { Tabs, Tab, Container, Header, TabHeading, Text } from "native-base";
+import {
+  Tabs,
+  Tab,
+  Container,
+  Header,
+  TabHeading,
+  Text,
+  Icon
+} from "native-base";
 import { TabOne, TabTwo } from "./client/components";
+import { Ionicons } from "@expo/vector-icons";
 
 export default class App extends React.Component {
   render() {
@@ -13,6 +22,7 @@ export default class App extends React.Component {
             <Tab
               heading={
                 <TabHeading>
+                  <Icon name="home" />
                   <Text>Tab 1</Text>
                 </TabHeading>
               }
@@ -22,6 +32,7 @@ export default class App extends React.Component {
             <Tab
               heading={
                 <TabHeading>
+                  <Icon name="settings" />
                   <Text>Tab 2</Text>
                 </TabHeading>
               }

@@ -12,7 +12,9 @@ const TabTwo = () => {
 
 const styles = StyleSheet.create({
   text: {
-    color: "orange"
+    color: "orange",
+    alignSelf: "center",
+    marginTop: 20
   }
 });
 
