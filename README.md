@@ -4,4 +4,5 @@
 
 ### Sample 2 Tab layout
 
-![Alt text](assets/screenshotTabOne.jpeg "Title")
+- Screenshot
+  ![Alt text](assets/screenshotTabOne.jpeg "Title")
