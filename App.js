@@ -10,7 +10,7 @@ import {
   Text
 } from "react-native-ui-kitten";
 import { mapping, light, dark } from "@eva-design/eva";
-import { default as appTheme } from "./assets/custom-theme.json";
+import { default as appTheme } from "./client/assets/custom-theme.json";
 
 // const themes = { light, dark };
 const themes = { light, appTheme };
