@@ -12,14 +12,14 @@ import {
 import { mapping, light, dark } from "@eva-design/eva";
 import { default as appTheme } from "./client/assets/custom-theme.json";
 
-// const themes = { light, dark };
-const themes = { light, appTheme };
+const themes = { light, dark };
+// const themes = { light, appTheme };
 
 export default App = () => {
   const [theme, setTheme] = React.useState("light");
 
   const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "appTheme" : "light";
+    const nextTheme = theme === "light" ? "dark" : "light";
     setTheme(nextTheme);
   };
 
