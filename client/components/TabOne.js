@@ -1,28 +1,22 @@
 import React from "react";
-import { Text, Button } from "native-base";
-import { View, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import { Button, Text, Layout } from "react-native-ui-kitten";
 
-const TabOne = () => {
+const TabOne = props => {
   return (
-    <View>
-      <Text style={styles.text}>Hello World</Text>
-
-      <Button style={styles.button}>
-        <Text>Button</Text>
-      </Button>
-    </View>
+    <Layout style={styles.container}>
+      <Text>Try Dark Mode</Text>
+      <Text></Text>
+      <Button onPress={props.toggleTheme}>Toggle Dark Mode</Button>
+    </Layout>
   );
 };
 
 const styles = StyleSheet.create({
-  text: {
-    alignSelf: "center",
-    marginTop: 20
-  },
-  button: {
-    width: 80,
-    alignSelf: "center",
-    marginTop: 50
+  container: {
+    // flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   }
 });
 

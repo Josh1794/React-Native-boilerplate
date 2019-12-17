@@ -1,54 +1,61 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import {
-  Tabs,
-  Tab,
-  Container,
-  Header,
-  TabHeading,
-  Text,
-  Icon
-} from "native-base";
-import { TabOne, TabTwo } from "./client/components";
-import { Ionicons } from "@expo/vector-icons";
+import { StyleSheet } from "react-native";
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Container>
-          <Header hasTabs />
-          <Tabs>
-            <Tab
-              heading={
-                <TabHeading>
-                  <Icon name="home" />
-                  <Text>Tab 1</Text>
-                </TabHeading>
-              }
-            >
-              <TabOne />
-            </Tab>
-            <Tab
-              heading={
-                <TabHeading>
-                  <Icon name="settings" />
-                  <Text>Tab 2</Text>
-                </TabHeading>
-              }
-            >
+import { TabOne, TabTwo } from "./client/components";
+import {
+  ApplicationProvider,
+  Layout,
+  Tab,
+  TabView,
+  Text
+} from "react-native-ui-kitten";
+import { mapping, light, dark } from "@eva-design/eva";
+
+const themes = { light, dark };
+
+export default App = () => {
+  const [theme, setTheme] = React.useState("light");
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+  };
+
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
+
+  return (
+    <ApplicationProvider mapping={mapping} theme={themes[theme]}>
+      <Layout style={styles.container}>
+        <TabView
+          selectedIndex={selectedIndex}
+          onSelect={setSelectedIndex}
+          style={styles.tabs}
+        >
+          <Tab title="TabOne">
+            <Layout style={styles.tabContainer}>
+              <TabOne toggleTheme={toggleTheme} />
+            </Layout>
+          </Tab>
+          <Tab title="TabTwo">
+            <Layout style={styles.tabContainer}>
               <TabTwo />
-            </Tab>
-          </Tabs>
-        </Container>
-      </View>
-    );
-  }
-}
+            </Layout>
+          </Tab>
+        </TabView>
+      </Layout>
+    </ApplicationProvider>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    height: 200
+  },
+  tabs: {
+    marginTop: 50
+  },
+  tabContainer: {
+    // minHeight: 500
   }
 });

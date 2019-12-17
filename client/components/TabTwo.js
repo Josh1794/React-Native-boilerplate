@@ -1,16 +1,21 @@
 import React from "react";
-import { Text } from "native-base";
 import { View, StyleSheet } from "react-native";
+import { Layout, Text } from "react-native-ui-kitten";
 
-const TabTwo = () => {
+const TabTwo = props => {
   return (
-    <View>
+    <Layout style={styles.container}>
       <Text style={styles.text}>Hello World!</Text>
-    </View>
+    </Layout>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    // flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
   text: {
     color: "orange",
     alignSelf: "center",
