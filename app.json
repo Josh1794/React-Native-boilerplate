@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "React Native Shell App",
-    "slug": "react-native-shell-app",
+    "name": "React Native Boilerplate",
+    "slug": "react-native-boilerplate",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": ["ios", "android", "web"],
@@ -22,6 +22,6 @@
       "userInterfaceStyle": "automatic"
     },
     "description": "Basic React-native shell app with swiping tabs using Expo and Native-base ",
-    "githubUrl": "https://github.com/Josh1794/React-Native-shell-app"
+    "githubUrl": "https://github.com/Josh1794/React-Native-boilerplate"
   }
 }
