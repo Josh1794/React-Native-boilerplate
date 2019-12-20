@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet } from "react-native";
-
+import { StyleSheet, StatusBar } from "react-native";
 import { TabOne, TabTwo } from "./client/components";
 import {
   ApplicationProvider,
@@ -10,7 +9,7 @@ import {
   Text
 } from "react-native-ui-kitten";
 import { mapping, light, dark } from "@eva-design/eva";
-import { default as appTheme } from "./client/assets/custom-theme.json";
+// import { default as appTheme } from "./client/assets/custom-theme.json";
 
 const themes = { light, dark };
 // const themes = { light, appTheme };
@@ -22,11 +21,18 @@ export default App = () => {
     const nextTheme = theme === "light" ? "dark" : "light";
     setTheme(nextTheme);
   };
+  let statusColor = "";
+  if (theme === "light") {
+    statusColor = "dark-content";
+  } else {
+    statusColor = "light-content";
+  }
 
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   return (
     <ApplicationProvider mapping={mapping} theme={themes[theme]}>
+      <StatusBar barStyle={`${statusColor}`} />
       <Layout style={styles.container}>
         <TabView
           selectedIndex={selectedIndex}
@@ -35,12 +41,12 @@ export default App = () => {
         >
           <Tab title="TabOne">
             <Layout style={styles.tabContainer}>
-              <TabOne toggleTheme={toggleTheme} />
+              <TabOne />
             </Layout>
           </Tab>
           <Tab title="TabTwo">
             <Layout style={styles.tabContainer}>
-              <TabTwo />
+              <TabTwo toggleTheme={toggleTheme} />
             </Layout>
           </Tab>
         </TabView>
@@ -55,6 +61,7 @@ const styles = StyleSheet.create({
     height: 200
   },
   tabs: {
+    flex: 1,
     marginTop: 50
   },
   tabContainer: {

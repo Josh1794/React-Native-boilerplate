@@ -1,11 +1,13 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Layout, Text } from "react-native-ui-kitten";
+import { Button, Text, Layout } from "react-native-ui-kitten";
 
 const TabTwo = props => {
   return (
     <Layout style={styles.container}>
-      <Text style={styles.text}>Hello World!</Text>
+      <Text>Try Dark Mode</Text>
+      <Text></Text>
+      <Button onPress={props.toggleTheme}>Toggle Dark Mode</Button>
     </Layout>
   );
 };
@@ -15,11 +17,6 @@ const styles = StyleSheet.create({
     // flex: 1,
     justifyContent: "center",
     alignItems: "center"
-  },
-  text: {
-    color: "orange",
-    alignSelf: "center",
-    marginTop: 20
   }
 });
 
