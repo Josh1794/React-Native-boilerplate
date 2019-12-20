@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Button, Text, Layout } from "react-native-ui-kitten";
+import { Text, Layout } from "react-native-ui-kitten";
 
 const TabOne = props => {
   return (

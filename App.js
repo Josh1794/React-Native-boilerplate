@@ -63,8 +63,5 @@ const styles = StyleSheet.create({
   tabs: {
     flex: 1,
     marginTop: 50
-  },
-  tabContainer: {
-    // minHeight: 500
   }
 });
