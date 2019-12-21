@@ -18,9 +18,10 @@ export default App = () => {
   const [theme, setTheme] = React.useState("light");
 
   const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light";
+    const nextTheme = theme === "light" ? "dark" : "light"; // to make custom theme replace dark/light with theme name (i.e appTheme)
     setTheme(nextTheme);
   };
+
   let statusColor = "";
   if (theme === "light") {
     statusColor = "dark-content";
@@ -49,6 +50,12 @@ export default App = () => {
               <TabTwo toggleTheme={toggleTheme} />
             </Layout>
           </Tab>
+          {/* Additional Tab */}
+          {/* <Tab title="TabThree">
+            <Layout style={styles.tabContainer}>
+              <Text>Sample</Text>
+            </Layout>
+          </Tab> */}
         </TabView>
       </Layout>
     </ApplicationProvider>

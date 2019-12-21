@@ -21,7 +21,7 @@
       "supportsTablet": true,
       "userInterfaceStyle": "automatic"
     },
-    "description": "Basic React-native shell app with swiping tabs using Expo and Native-base ",
+    "description": "Basic React-native shell app with swiping tabs using Expo and UI Kitten",
     "githubUrl": "https://github.com/Josh1794/React-Native-boilerplate"
   }
 }
