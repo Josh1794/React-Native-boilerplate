@@ -1,4 +1,4 @@
-# React-Native Shell App
+# React-Native Template
 
 ## A simple shell app for react native using expo and implementing tabs with UI Kitten
 
